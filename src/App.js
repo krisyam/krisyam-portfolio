@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import MainRouter from './routes/router';
+import { FooterComponent } from './components/FooterComponent';
+import { Header } from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <div className='content'>
+            <MainRouter/>
+        </div>
+        <ReturnToTop/>
+        <FooterComponent/>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+
+function ReturnToTop() {
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  return (
+    <div className='returnToTop'>
+      <button onClick={() => handleScrollToTop()}>Return to top</button>
+    </div>
+  );
+}
+  
