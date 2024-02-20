@@ -17,9 +17,7 @@ export function FooterComponent() {
       </div>
       <div>
         Follow me
-        <ul className='app-ul row'>
-          <ExternalLinks />
-        </ul>
+        <ExternalLinks />
       </div>
     </footer>
   );
