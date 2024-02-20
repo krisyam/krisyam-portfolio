@@ -7,7 +7,7 @@ import AboutMeComponent from "../components/AboutMeComponent";
 import ContactMeComponent from "../components/ContactMeComponent";
 import SkillsComponent from "../components/SkillsComponent";
 import { MerchComponent } from "../components/MerchComponent";
-import Home from "../components/Home";
+// import Home from "../components/Home";
 
 // const setSessionExpiration = () => {
 //   let expired = window.localStorage.getItem("expire");
