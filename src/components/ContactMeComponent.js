@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { AccordionComponent } from "./AccordionComponent";
+import { Lorem } from "./Lorem";
 export default function ContactMeComponent() {
   const data = [
     {
@@ -8,35 +8,40 @@ export default function ContactMeComponent() {
     },
     {
       question: "How can I drop you a line?",
-      answer: "Just shoot an email to [your@email.com] or find me on [your favorite communication platform]. We're always up for a chat about code or memes."
+      answer: "We're always up for a chat about code or memes."
     },
     {
-      question: "Any Easter eggs hidden in your code?",
-      answer: "Absolutely! My code is like a treasure hunt or maybe not? You wont know until you dig deep or maybe just become disappointed. Who knows :)'"
+      question: "Any easter eggs hidden in your code?",
+      answer: "Absolutely! My code is like a treasure hunt or maybe not? You wont know until you dig deep or maybe just become disappointed. Just don't check the source code :)"
     }
   ];
 
   return (
-    <div className='contactme'>
-      <div className="secondary letsTalk">Lets Talk?</div>
+    <div className='contactMe'>
+      <div className="secondary letsTalk">
+        <div className="text">Lets Talk?</div>
+      </div>
       <div className="container">
         <div className="module doubleContainer">
-          <img alt="happy chibi me"/>
-          <form>
-            <label className=''>Email: </label>
-            <input type="email" placeholder="yerEmail@anywhere.net"/>
-            <label className=''>Message: </label>
-            <input type="text" placeholder="Message Here"/>
-            <button type="submit">Submit</button>
-          </form>
+          <div className="contactForm">
+          <img src="https://thebigcb.com/images/Merch/laptop.png" alt="happy chibi me"/>
+          <div><Lorem/></div>
+            <form>
+              <label className=''>Email: </label>
+              <input type="email" placeholder="yerEmail@anywhere.net"/>
+              <label className=''>Message: </label>
+              <input type="text" placeholder="Message Here"/>
+              <input type="submit" value="Submit"/>
+            </form>
+          </div>
         </div>
         <div className="module doubleContainer">
-          <div>FAQ</div>
+          <div className="faq">FAQ</div>
           {data.map((item, index) => (
             <AccordionComponent
               key={index}
-              question={item.question}
-              answer={item.answer}
+              title={item.question}
+              desc={item.answer}
             />
           ))}
         </div>
@@ -45,21 +50,3 @@ export default function ContactMeComponent() {
   );
 }
 
-function AccordionComponent({ question, answer }) {
-  const [toggle, setToggle] = useState(false);
-
-  const handleClick = () => {
-    setToggle(!toggle);
-  };
-
-  return (
-    <div className="accordion" style={{cursor: 'pointer', userSelect: 'none'}} onClick={handleClick}>
-      <div>
-        {question}
-      </div>
-      <div style={{ display: toggle ? 'block' : 'none' }}>
-        {answer}
-      </div>
-    </div>
-  );
-}

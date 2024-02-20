@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 import MainRouter from './routes/router';
 import { FooterComponent } from './components/FooterComponent';
 import { Header } from './components/Header';
@@ -21,9 +21,8 @@ function App() {
 
 export default App;
 
-
-
 function ReturnToTop() {
+  const location = useLocation().pathname;
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -31,7 +30,7 @@ function ReturnToTop() {
     });
   };
   return (
-    <div className='returnToTop'>
+    <div className='returnToTop' style={{ display: location === '/' ? "none": ""}}>
       <button onClick={() => handleScrollToTop()}>Return to top</button>
     </div>
   );

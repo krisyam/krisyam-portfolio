@@ -5,6 +5,8 @@ header {
   justify-content: space-around;
   padding: 10px 0;
   color:antiquewhite;
+  
+  z-index: 1000;
   .pageLinks {
     a {
       padding-left: 20px;
@@ -53,6 +55,7 @@ footer{
   }
 }
 .content {
+  position: relative;
   flex-grow: 1; 
 }
 .a {
@@ -136,40 +139,93 @@ footer{
   transform: scale(1.009);
 }
 
-.contactme {
+.contactMe {
   .letsTalk {
     display: flex;
-    height: 200px;
+    height: 250px;
     align-items: center;
     justify-content: center;
     color: antiquewhite;
     font-size: 40px;
     font-weight: bold;
+    z-index: 1;
+    .text {
+      position: relative;
+      top: -20px;
+    }
   }
   .container {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    .doubleContainer {
-      position: relative;
-      top: -20px;
-      width: 40%;
-      background-color: #9EC8B9;
-    }
   }
+  .doubleContainer {
+    position: relative;
+    top: -40px;
+    height: fit-content;
+    width: 40%;
+    padding: 20px;
+    background-color: #9EC8B9;
+    z-index: 2;
+  }
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%-100px;
+    border: #5C8374 30px solid;
+    padding: 50px;
+  }
+  img {
+    display: flex;
+    width: 50%;
+    align-self: center;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form input {
+    border: 1px solid #1B4242;
+    padding: 5px;
+    border-radius: 3px;
+    /* background-color: #1B4242; */
+  }
+}
+.faq {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: sans-serif;
 }
 
 .accordion {
-  position: relative;
-  left: -10px;
-  width: 90%;
-  padding: 4px 20px;
+  /* position: relative;
+  left: -10px; */
+  width: 100%;
   border-bottom: #092635 1px solid;
-  margin: 4px 0;
-  background-color: #8cafa3;
+  margin: 0 5px;
+  /* background-color: #8cafa3; */
+  .arrow{
+    margin-right: 10px;
+    width:fit-content;
+    font-weight:800;
+    transition: .1s ease-in-out;
+  }
+  .arrow.active{
+    font-size: 18px;
+    rotate: 90deg;
+  }
   .questionContainer {
+    display: flex;
+    padding: 8px 4px 4px 4px;
+  }
+  .questionContainer:hover{
+    background-image: linear-gradient(90deg,transparent,rgba(9, 38, 53,0.1),transparent);
+  }
+  .questionContainer.active{
+    background-image: linear-gradient(90deg,transparent,rgba(9, 38, 53,0.05),transparent);
   }
   .answerContainer {
-
+    padding: 0 4px 4px 4px;
   }
 }

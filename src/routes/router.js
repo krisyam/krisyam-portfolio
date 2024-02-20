@@ -7,6 +7,7 @@ import AboutMeComponent from "../components/AboutMeComponent";
 import ContactMeComponent from "../components/ContactMeComponent";
 import SkillsComponent from "../components/SkillsComponent";
 import { MerchComponent } from "../components/MerchComponent";
+import Home from "../components/Home";
 
 // const setSessionExpiration = () => {
 //   let expired = window.localStorage.getItem("expire");
@@ -41,8 +42,16 @@ const MainRouter = () => {
   return (
     <>
       <Routes>
+        {/* <Route
+          exact path="/"
+          element={<Home/>}
+        /> */}
         <Route
           exact path="/"
+          element={<AboutMeComponent/>}
+        />
+        <Route
+          exact path="/aboutme"
           element={<AboutMeComponent/>}
         />
         <Route
@@ -59,6 +68,10 @@ const MainRouter = () => {
         /> */}
         <Route
           exact path="/contactme"
+          element={<ContactMeComponent/>}
+        />
+        <Route
+          exact path="/hidden"
           element={<ContactMeComponent/>}
         />
         {/* 404 PAGE: WHEN ROUTES AREN'T DEFINE */}

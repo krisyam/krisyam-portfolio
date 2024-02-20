@@ -1,8 +1,10 @@
+import { useLocation } from 'react-router-dom';
 import { ExternalLinks } from './ExternalLinksComponent';
 
 export function FooterComponent() {
+  const location = useLocation().pathname;
   return (
-    <footer>
+    <footer style={{ display: location === '/' ? "none": ""}}>
       <div>
         Logo
       </div>
