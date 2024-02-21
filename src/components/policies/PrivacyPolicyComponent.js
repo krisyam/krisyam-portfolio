@@ -2,7 +2,6 @@ import './Privacy.css'
 import React from 'react'
 import MyAcademyPrivacyPolicy from './myAcademyPrivacyPolicy'
 import { useLocation } from 'react-router-dom';
-import AboutMeComponent from '../AboutMeComponent';
 
 export default function PrivacyPolicyComponent() {
     const { pathname } = useLocation();
