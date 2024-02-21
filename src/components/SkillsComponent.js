@@ -1,7 +1,3 @@
 export default function SkillsComponent() {
-  return (
-    <div className='a'>
-      My Skills
-    </div>
-  );
+    return <div className="a">My Skills</div>
 }

@@ -1,81 +1,42 @@
-import React from "react";
-import {
-  Routes,
-  Route
-} from "react-router-dom";
-import AboutMeComponent from "../components/AboutMeComponent";
-import ContactMeComponent from "../components/ContactMeComponent";
-import SkillsComponent from "../components/SkillsComponent";
-import { MerchComponent } from "../components/MerchComponent";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import AboutMeComponent from '../components/AboutMeComponent'
+import ContactMeComponent from '../components/ContactMeComponent'
+import SkillsComponent from '../components/SkillsComponent'
+import { MerchComponent } from '../components/MerchComponent'
+// import MyAcademyPrivacyPolicy from "../components/policies/myAcademyPrivacyPolicy";
+import ProjectsComponent from '../components/projects/ProjectsComponent'
+import PrivacyPolicyComponent from '../components/policies/PrivacyPolicyComponent'
+import BucketListComponent from '../components/BucketListComponent'
 // import Home from "../components/Home";
 
-// const setSessionExpiration = () => {
-//   let expired = window.localStorage.getItem("expire");
-//   if (new Date().getTime() > expired && expired != null) {
-//     window.localStorage.clear();
-//     failedMessage("Logged Out due to Inactivity");
-//     return false;
-//   } else {
-//     const time = new Date();
-//     let hour = 1 * 60 * 60 * 1000;
-//     window.localStorage.setItem("expire", time.getTime() + hour);
-//     return true;
-//   }
-// };
-
-// const checkRedirect = (token, path, redirect_path, navigate, redirect) => {
-//   if (token != null) {
-//     if (!path.includes(redirect_path) && path !== "/") {
-//       navigate(redirect_path);
-//     }
-//   } else {
-//     const allowed = allowed_paths.some((substring) => path.includes(substring));
-//     if (allowed === true) {
-//       redirect = true;
-//     }
-//     if (!redirect) navigate("/");
-//   }
-// };
-
 const MainRouter = () => {
-
-  return (
-    <>
-      <Routes>
-        {/* <Route
+    return (
+        <>
+            <Routes>
+                {/* <Route
           exact path="/"
           element={<Home/>}
         /> */}
-        <Route
-          exact path="/"
-          element={<AboutMeComponent/>}
-        />
-        <Route
-          exact path="/aboutme"
-          element={<AboutMeComponent/>}
-        />
-        <Route
-          exact path="/skills"
-          element={<SkillsComponent/>}
-        />
-        <Route
-          exact path="/merch"
-          element={<MerchComponent/>}
-        />
-        {/* <Route
-          exact path="/aspirations"
-          element={<BucketListComponent/>}
-        /> */}
-        <Route
-          exact path="/contactme"
-          element={<ContactMeComponent/>}
-        />
-        <Route
-          exact path="/hidden"
-          element={<ContactMeComponent/>}
-        />
-        {/* 404 PAGE: WHEN ROUTES AREN'T DEFINE */}
-        {/* <Route
+                <Route exact path="/" element={<AboutMeComponent />} />
+                <Route path="/aboutme" element={<AboutMeComponent />} />
+                <Route path="/skills" element={<SkillsComponent />} />
+                <Route path="/projects" element={<PrivacyPolicyComponent />}>
+                    <Route
+                        path="/projects/:name"
+                        element={<ProjectsComponent />}
+                    />
+                    <Route
+                        path="/projects/:name/privacy_policy"
+                        element={<PrivacyPolicyComponent />}
+                    />
+                </Route>
+                <Route path="/merch" element={<MerchComponent />} />
+                <Route path="/aspirations" element={<BucketListComponent />} />
+                <Route path="/contactme" element={<ContactMeComponent />} />
+                <Route path="/hidden" element={<ContactMeComponent />} />
+                {/* 404 PAGE: WHEN ROUTES AREN'T DEFINE */}
+                {/* <Route
           path="*"
           element={
             <>
@@ -83,9 +44,9 @@ const MainRouter = () => {
             </>
           }
         /> */}
-      </Routes>
-    </>
-  );
-};
+            </Routes>
+        </>
+    )
+}
 
-export default MainRouter;
+export default MainRouter

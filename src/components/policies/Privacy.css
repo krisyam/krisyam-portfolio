@@ -1,0 +1,31 @@
+.privacy-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.scrollable-content {
+    overflow: auto;
+    max-height: 400px; /* Set a maximum height if needed */
+  }
+
+  .clickable-link {
+    cursor: pointer;
+    color: #0366d6; /* a softer blue */
+    text-decoration: underline;
+    margin-bottom: 8px;
+    filter: saturate(70%); /* reduce saturation to 70% */
+    transition: color 0.3s ease; /* add a smooth color transition */
+  }
+  
+  .clickable-link:hover {
+    color: #025aa5; /* a slightly darker blue on hover */
+  }
+  

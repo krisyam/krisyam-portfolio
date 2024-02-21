@@ -1,22 +1,64 @@
 header {
   display: inline-flex;
   width: 100%;
-  background-color:#092635;
+  background-color: #092635;
   justify-content: space-around;
   padding: 10px 0;
-  color:antiquewhite;
-  
+  color: antiquewhite;
   z-index: 1000;
-  .pageLinks {
-    a {
-      padding-left: 20px;
-      text-decoration: none;
-      color: antiquewhite
-    }
-    a:hover, a:active {
-      color: antiquewhite;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    margin: 0 20px 0 0;
+  }
+  .squished {
+    @media screen and (max-width: 768px) {
+      margin: 0 20px;
     }
   }
+  .pageLinks {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #092635;
+    }
+  }
+  .pageLinks a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: antiquewhite;
+    display: block;
+  }
+  .pageLinks a:hover,
+  .pageLinks a:active {
+    color: antiquewhite;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+    .pageLinks {
+      position: fixed;
+    }
+    .menu-toggle {
+      display: none;
+    }
+    .menu-icon:checked + .pageLinks {
+      display: flex;
+    }
+  }
+
 }
 
 footer{
