@@ -1,0 +1,9 @@
+# Redirects for React Router
+/*                        /index.html                  200
+/aboutme                  /index.html                  200
+/skills                   /index.html                  200
+/projects                 /index.html                  200
+/merch                    /index.html                  200
+/aspirations               /index.html                  200
+/contactme                /index.html                  200
+/hidden                   /index.html                  200
