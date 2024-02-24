@@ -18,7 +18,7 @@ export default function ContactMeComponent() {
 
     return (
         <div className="contactMe">
-            <div className="secondary letsTalk">
+            <div className="secondary title">
                 <div className="text">Lets Talk?</div>
             </div>
             <div className="container">
@@ -31,7 +31,20 @@ export default function ContactMeComponent() {
                         <div>
                             <Lorem />
                         </div>
-                        <form>
+                        <div className="formContainer">
+                            <label>Email: </label> 
+                            <div className="inputContainer">
+                                <span className="icon">
+                                    <i className=""></i>
+                                </span>
+                                <input name="email"
+                                    placeholder="yerEmail@anywhere.net"
+                                    className="input"
+                                    type="email"
+                                />
+                            </div>
+                        </div>
+                        {/* <form>
                             <label className="">Email: </label>
                             <input
                                 type="email"
@@ -40,7 +53,7 @@ export default function ContactMeComponent() {
                             <label className="">Message: </label>
                             <input type="text" placeholder="Message Here" />
                             <input type="submit" value="Submit" />
-                        </form>
+                        </form> */}
                     </div>
                 </div>
                 <div className="module doubleContainer">

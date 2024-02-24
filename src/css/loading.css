@@ -1,0 +1,16 @@
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: leap 1s ease-in-out infinite, colorChange 2s infinite alternate;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}

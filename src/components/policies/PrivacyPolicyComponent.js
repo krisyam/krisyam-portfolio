@@ -31,8 +31,15 @@ export default function PrivacyPolicyComponent() {
 
     return (
         <div className="privacy-container">
-            <h1 className="">Privacy Policy</h1>
-            {renderPrivacyPolicy()}
+            <div className="secondary title">
+                <div className="text">Privacy Policy</div>
+            </div>
+            <div style={{display:'flex', justifyContent: 'center'}}>
+                <div className='doubleContainer' style={{width: "90%"}}>
+                    {renderPrivacyPolicy()}
+                </div>
+            </div>
+            
         </div>
     );
 }

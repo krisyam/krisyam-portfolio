@@ -68,7 +68,7 @@ function MerchItem({ imgSrc, title, description }) {
                 height="960"
                 width="1280"
             />
-            <div className="title">{title}</div>
+            <div className="itemTitle">{title}</div>
             <div className="description">{description}</div>
         </div>
     )
