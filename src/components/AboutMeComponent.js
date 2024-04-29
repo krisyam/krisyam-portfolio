@@ -1,8 +1,15 @@
 import { useEffect } from 'react'
 import Artwork from '../images/Artwork.png'
 import { Lorem } from './Lorem'
+import loadingGif from '../images/loading-gif.gif'
+import { useState } from 'react';
 
 export default function AboutMeComponent() {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    const handleImageLoad = () => {
+        setImageLoaded(true);
+    };
     useEffect(() => {
         const script = document.createElement('script')
         script.type = 'text/javascript'
@@ -21,10 +28,21 @@ export default function AboutMeComponent() {
                     developer and an aspiring game developer.
                 </div>
                 <div className="partition">
+                    {!imageLoaded && (
+                        <img
+                            className="img"
+                            src={loadingGif}
+                            alt="Loading..."
+                        />
+                    )}
                     <img
-                        className="img"
+                        className={`img ${imageLoaded ? 'loaded' : ''}`}
                         src={Artwork}
                         alt="My interpretation of myself"
+                        onLoad={handleImageLoad}
+                        onError={(e) => {
+                            e.target.src = loadingGif;
+                        }}
                     />
                 </div>
             </div>

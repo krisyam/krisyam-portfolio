@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export function Header() {
+export function Header({darkModeSwitcher}) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const toggleSidebar = () => {
         console.log('toggling sidebar')
@@ -28,6 +28,7 @@ export function Header() {
                 <Link to={'/merch'}>Merch</Link>
                 <Link to={'/aspirations'}>Bucket List</Link>
                 <Link to={'/contactme'}>Contact Me</Link>
+                <button onClick={() => darkModeSwitcher()}>Dark Mode</button>
             </div>
         </header>
     )

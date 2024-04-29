@@ -4,7 +4,9 @@ import { ExternalLinks } from './ExternalLinksComponent'
 export function FooterComponent() {
     const location = useLocation().pathname
     return (
-        <footer style={{ display: location === '/' ? 'none' : '' }}>
+        <footer 
+            // style={{ display: location === '/' ? 'none' : '' }}
+        >
             <div>Logo</div>
             <div>
                 Contact Details
