@@ -26,7 +26,7 @@ export function Header({darkModeSwitcher}) {
                 {/* <Link to={'/skills'}>Skills</Link> */}
                 <Link to={'/projects'}>Projects</Link>
                 <Link to={'/merch'}>Merch</Link>
-                <Link to={'/aspirations'}>Bucket List</Link>
+                {/* <Link to={'/aspirations'}>Bucket List</Link> */}
                 <Link to={'/contactme'}>Contact Me</Link>
                 {/* <button onClick={() => darkModeSwitcher()}>Dark Mode</button> */}
             </div>

@@ -1,7 +1,11 @@
 input {
   all: unset;
 }
-
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 header {
   display: inline-flex;
   width: 100%;
@@ -110,6 +114,7 @@ footer{
 .intro {
   display: flex;
   flex-direction: row !important;
+  height: 380px;
   .partition {
     display: flex;
     width: 45%;
@@ -127,7 +132,7 @@ footer{
   flex-direction: column;
   width: 100%-20px;
   align-items: center;
-  padding: 20px 0 20px 20px;
+  padding: 20px;
 }
 
 .secondary {

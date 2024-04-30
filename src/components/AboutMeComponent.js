@@ -20,7 +20,7 @@ export default function AboutMeComponent() {
                     Hi there! I am Kristian Benzene Ayam and I am an app
                     developer and an aspiring game developer.
                 </div>
-                <div className="partition" style={{ height: "100%",maxHeight: 380}}>
+                <div className="partition">
                     <img src={Artwork} loading="lazy" alt='Artwork' />
                 </div>
             </div>

@@ -2,9 +2,7 @@ import { ExternalLinks } from './ExternalLinksComponent'
 
 export function FooterComponent() {
     return (
-        <footer 
-            // style={{ display: location === '/' ? 'none' : '' }}
-        >
+        <footer >
             <div>Logo</div>
             <div>
                 Contact Details
