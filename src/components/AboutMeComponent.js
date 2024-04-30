@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import Artwork from '../images/Artwork.png'
 import { Lorem } from './Lorem'
-import loadingGif from '../images/loading-gif.gif'
-import { useState } from 'react';
 
 export default function AboutMeComponent() {
     useEffect(() => {
@@ -23,7 +21,7 @@ export default function AboutMeComponent() {
                     developer and an aspiring game developer.
                 </div>
                 <div className="partition">
-                    <img src={Artwork} loading="lazy"/>
+                    <img src={Artwork} loading="lazy" alt='Artwork'/>
                 </div>
             </div>
             <div className="secondary module">

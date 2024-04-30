@@ -4,11 +4,6 @@ import projectImg from '../../images/myAcademyLogo.png'
 import { Link } from 'react-router-dom'
 
 export default function ProjectsComponent() {
-    const projects = ['myAcademy', 'Project 2', 'Project 3']; // Replace with your actual project names
-    function handleClick(project) {
-        // Handle click event for the project
-        console.log(`Clicked on ${project}`);
-    }
     function redirectToGoogleDrive() {
         window.location.href = 'https://drive.google.com/file/d/1Tsi4MDJobw6zhuglas_4p6DjLINzEKBc/view?usp=sharing';
     }
