@@ -24,14 +24,12 @@ function App() {
     }, [])
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <div className={isDarkMode}>
-                <Header darkModeSwitcher={darkModeSwitcher}/>
-                <div className="content">
-                    <MainRouter />
-                </div>
-                <ReturnToTop />
-                <FooterComponent />
+            <Header darkModeSwitcher={darkModeSwitcher}/>
+            <div className="content">
+                <MainRouter />
             </div>
+            <ReturnToTop />
+            <FooterComponent />
         </BrowserRouter>
     )
 }
