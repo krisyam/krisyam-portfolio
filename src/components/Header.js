@@ -23,12 +23,12 @@ export function Header({darkModeSwitcher}) {
 
             <div className="pageLinks">
                 <Link to={'/'}>About Me</Link>
-                <Link to={'/skills'}>Skills</Link>
+                {/* <Link to={'/skills'}>Skills</Link> */}
                 <Link to={'/projects'}>Projects</Link>
                 <Link to={'/merch'}>Merch</Link>
                 <Link to={'/aspirations'}>Bucket List</Link>
                 <Link to={'/contactme'}>Contact Me</Link>
-                <button onClick={() => darkModeSwitcher()}>Dark Mode</button>
+                {/* <button onClick={() => darkModeSwitcher()}>Dark Mode</button> */}
             </div>
         </header>
     )

@@ -1,0 +1,56 @@
+.project-header {
+    width: auto;
+    margin: 40px 100px;
+    font-size: 48px;
+    font-weight: 700;
+    color: antiquewhite;
+    z-index: 1000;
+}
+
+.project-container {
+    display: inline-flex;
+    width: 80%;
+    max-height: 250px;
+    background-color: #9EC8B9;
+    justify-self: center;
+    align-self: center;
+    padding: 25px;
+    color: black;
+    z-index: 3;
+    box-shadow: 5px 5px 5px #333;
+    border-radius: 10px;
+    transition-duration: 200ms;
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+      margin: 0 20px 0 0;
+    }
+}
+
+.project-container:hover {
+    transition-duration: 200ms;
+    transform: scale(1.005);
+}
+.projImage {
+    width: 350px;
+    height: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-right: 40px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px #333;
+}
+.projTitle {
+
+}
+.projDesc {
+    max-height: 250px;
+}
+.projButtons {
+    margin-left: 20px;
+    background-color: #dbdbdb;
+    color: black;
+    box-shadow: 1px 1px 1px #333;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

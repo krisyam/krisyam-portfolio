@@ -8,29 +8,21 @@ import { MerchComponent } from '../components/MerchComponent'
 import ProjectsComponent from '../components/projects/ProjectsComponent'
 import PrivacyPolicyComponent from '../components/policies/PrivacyPolicyComponent'
 import BucketListComponent from '../components/BucketListComponent'
+import MyAcademy from '../components/projects/myAcademy'
 // import Home from "../components/Home";
 
 const MainRouter = () => {
     return (
         <>
             <Routes>
-                {/* <Route
-          exact path="/"
-          element={<Home/>}
-        /> */}
-                <Route exact path="/" element={<AboutMeComponent />} />
+                <Route path="/" element={<AboutMeComponent />} />
                 <Route path="/aboutme" element={<AboutMeComponent />} />
                 <Route path="/skills" element={<SkillsComponent />} />
-                <Route path="/projects" element={<PrivacyPolicyComponent />}>
-                    <Route
-                        path="/projects/:name"
-                        element={<ProjectsComponent />}
-                    />
-                    <Route
-                        path="/projects/:name/privacy_policy"
-                        element={<PrivacyPolicyComponent />}
-                    />
-                </Route>
+                
+                <Route path="/projects" element={<ProjectsComponent />}/>
+                <Route path="/projects/myacademy" element={<MyAcademy />} />
+                <Route path="/projects/myacademy/privacy_policy" element={<PrivacyPolicyComponent />}/>
+
                 <Route path="/merch" element={<MerchComponent />} />
                 <Route path="/aspirations" element={<BucketListComponent />} />
                 <Route path="/contactme" element={<ContactMeComponent />} />
