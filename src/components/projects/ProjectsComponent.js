@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function ProjectsComponent() {
     function redirectToGoogleDrive() {
-        window.location.href = 'https://drive.google.com/file/d/1Tsi4MDJobw6zhuglas_4p6DjLINzEKBc/view?usp=sharing';
+        window.location.href = 'https://drive.google.com/file/d/1ghRyWeDXQ3a-CBSTgSeMZKSG27IULvVo/view?usp=sharing';
     }
     return (
         <>
