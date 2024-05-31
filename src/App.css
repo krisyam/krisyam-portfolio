@@ -23,35 +23,6 @@ header {
       margin: 0 20px;
     }
   }
-  .pageLinks {
-    display: flex;
-    @media screen and (max-width: 768px) {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: #092635;
-    }
-  }
-  .pageLinks a {
-    padding: 0 20px;
-    text-decoration: none;
-    color: antiquewhite;
-    display: block;
-  }
-  .pageLinks a:hover,
-  .pageLinks a:active {
-    color: antiquewhite;
-  }
-  .menu-toggle {
-    display: none;
-  }
-  .menu-icon {
-    display: none;
-    cursor: pointer;
-  }
   @media screen and (max-width: 768px) {
     .menu-icon {
       display: block;
@@ -68,6 +39,35 @@ header {
   }
 }
 
+.pageLinks {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    /* background-color: #092635; */
+  }
+  a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: antiquewhite;
+    display: block;
+  }
+  a:hover,
+  a:active {
+    color: antiquewhite;
+  }
+}
+.menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 footer{
   /* display: flex;
   margin-top: auto; */
@@ -130,18 +130,33 @@ footer{
 .module {
   display: flex;
   flex-direction: column;
-  width: 100%-20px;
+  width: 100%;
+  height: 400px;
   align-items: center;
+  justify-content: center;
   padding: 20px;
+  background-color: #113030;
+  color: white;
+  .moduleContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 75vw;
+  }
 }
 
 .secondary {
   background-color: #1B4242;
 }
 
-/* .cert {
-
-} */
+.cert {
+  background-color: #9EC8B9;
+  padding: 10px 20px;
+  width: 150px;
+  height: 240px;
+  border-radius: 20px;
+}
 
 .returnToTop {
   display: flex;
@@ -255,6 +270,7 @@ footer{
   padding: 20px;
   background-color: #9EC8B9;
   z-index: 2;
+  color: black;
 }
 .title {
   display: flex;

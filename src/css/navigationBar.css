@@ -1,0 +1,13 @@
+.navContainer {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    z-index: 99999;
+    background-color: #9EC8B9;
+    transition: 500ms;
+    .pageLinks a {
+        color: black;
+    }
+}

@@ -15,7 +15,7 @@ export default function AboutMeComponent() {
     }, [])
     return (
         <>
-            <div className="module intro ">
+            <div className="secondary module intro ">
                 <div className="partition">
                     Hi there! I am Kristian Benzene Ayam and I am an app
                     developer and an aspiring game developer.
@@ -24,30 +24,38 @@ export default function AboutMeComponent() {
                     <img src={Artwork} loading="lazy" alt='Artwork' />
                 </div>
             </div>
-            <div className="secondary module">
-                <div>About Me</div>
-                <div>
-                    <Lorem />
-                </div>
-            </div>
             <div className="module">
-                <div>A Brief Experience Summary</div>
-                <div>
-                    <div>DOST Intern</div>
+                <h1>About Me</h1>
+                <div className='moduleContainer'>
                     <div>
                         <Lorem />
                     </div>
                 </div>
             </div>
-            <div className="secondary module cert">
-                <div>Certificates</div>
-                <div
-                    data-iframe-width="150"
-                    data-iframe-height="270"
-                    data-share-badge-id="ff203be6-7095-45c5-81a0-37e26be4af1a"
-                    data-share-badge-host="https://www.credly.com"
-                />
-                {/* https://www.credly.com/badges/ff203be6-7095-45c5-81a0-37e26be4af1a/public_url */}
+            <div className="secondary module">
+                <h1>A Brief Experience Summary</h1>
+                <div className=''>
+                    <div>
+                        <div>DOST Intern</div>
+                        <div>
+                            <Lorem />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="module">
+                    <h1>Certificates</h1>
+                <div className='moduleContainer'>
+                    <div className='cert'>
+                        <div
+                            data-iframe-width="150"
+                            data-iframe-height="240"
+                            data-share-badge-id="ff203be6-7095-45c5-81a0-37e26be4af1a"
+                            data-share-badge-host="https://www.credly.com"
+                        ></div>
+                    </div>
+                    {/* https://www.credly.com/badges/ff203be6-7095-45c5-81a0-37e26be4af1a/public_url */}
+                </div>
             </div>
         </>
     )
