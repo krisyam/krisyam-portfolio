@@ -3,18 +3,27 @@ import { Link } from 'react-router-dom'
 import '../css/navigationBar.css'
 import { useEffect } from 'react';
 
-export function Header({darkModeSwitcher}) {
+export function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const toggleSidebar = useCallback(() => {
         setIsSidebarOpen(!isSidebarOpen);
     }, [isSidebarOpen]);
     useEffect(() => {
-        window.addEventListener('resize', toggleSidebar);
+        const handleResize = () => {
+            if (window.innerWidth < 768 && !isSidebarOpen) {
+                setIsSidebarOpen(true);
+            }
+            if (window.innerWidth >= 768 && isSidebarOpen) {
+                setIsSidebarOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
 
         return () => {
-            window.removeEventListener('resize', toggleSidebar);
+            window.removeEventListener('resize', handleResize);
         };
-    }, [toggleSidebar]);
+    }, [isSidebarOpen]);
     return (
         <>
             <header>

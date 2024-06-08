@@ -6,25 +6,9 @@ import { Header } from './components/Header'
 import { useEffect, useState } from 'react'
 
 function App() {
-    const [isDarkMode, setDarkMode] = useState('App light');
-    const darkModeSwitcher = () => {
-        console.log("Switching dark mode")
-        if (isDarkMode === 'App light') {
-            setDarkMode('App dark')
-            localStorage.setItem('darkMode', "App dark")
-        } else {
-            setDarkMode('App light')
-            localStorage.setItem('darkMode', "App light")
-        }
-    }
-    useEffect(() => {
-        const darkMode = localStorage.getItem('darkMode')
-        console.log('darkMode', darkMode)
-        setDarkMode(darkMode)
-    }, [])
     return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Header darkModeSwitcher={darkModeSwitcher}/>
+            <Header/>
             <div className="content">
                 <MainRouter />
             </div>
