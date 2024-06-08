@@ -49,8 +49,17 @@ export default function AboutMeComponent() {
                     <div className='cert'>
                         <div
                             data-iframe-width="150"
-                            data-iframe-height="240"
+                            data-iframe-height="270"
                             data-share-badge-id="ff203be6-7095-45c5-81a0-37e26be4af1a"
+                            data-share-badge-host="https://www.credly.com"
+                        ></div>
+                    </div>
+                    
+                    <div className='cert'>
+                        <div
+                            data-iframe-width="150"
+                            data-iframe-height="270"
+                            data-share-badge-id="c5b24495-647f-4ef4-942d-615560d002ac"
                             data-share-badge-host="https://www.credly.com"
                         ></div>
                     </div>

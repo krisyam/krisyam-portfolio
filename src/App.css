@@ -154,7 +154,9 @@ footer{
   background-color: #9EC8B9;
   padding: 10px 20px;
   width: 150px;
-  height: 240px;
+  height: 270px;
+  margin-left: 1em;
+  margin-right: 1em;
   border-radius: 20px;
 }
 

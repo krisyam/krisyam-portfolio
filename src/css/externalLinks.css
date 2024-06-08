@@ -1,0 +1,64 @@
+.followBtn {
+
+    .linkedinBtn button {
+        border: 1px solid #0077b5;
+    }
+    .githubBtn button {
+        border: 1px solid #24292e;
+        width: 5.8em;
+    }
+    button {
+        background-color: #fff;
+        padding: 5px;
+        position: relative;
+        width: 6.5em;
+        height: 2em;
+        transition: 0.5s;
+        font-size: 17px;
+        border-radius: 0.4em;
+        cursor: pointer;
+    }
+    
+    .linkedinBtn button p {
+        color: #0077b5;
+    }
+    .githubBtn button p {
+        color: #24292e;
+    }
+    button p {
+        position: absolute;
+        top: 0.4em;
+        left: 1.2em;
+        margin: 0;
+        padding: 0;
+        transition: .5s;
+    }
+    
+    button svg {
+        position: absolute;
+        top: 0.45em;
+        right: 0.5em;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: 0.5s;
+        height: 1em;
+        fill: #fff
+    }
+    
+    button:hover p {
+        left: 0.8em;
+        color: #fff
+    }
+    
+    button:hover svg {
+        opacity: 1;
+    }
+    
+    .linkedinBtn button:hover {
+        background-color: #0077b5;
+    }
+    .githubBtn button:hover {
+        background-color: #24292e;
+    }
+}
