@@ -1,24 +1,20 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/navigationBar.css'
 import { useEffect } from 'react';
 
 export function Header({darkModeSwitcher}) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-    const block = 'display: block;'
-    const toggleSidebar = () => {
-        console.log('toggling sidebar')
-        setIsSidebarOpen(!isSidebarOpen)
-    }
-    // ...
-
+    const toggleSidebar = useCallback(() => {
+        setIsSidebarOpen(!isSidebarOpen);
+    }, [isSidebarOpen]);
     useEffect(() => {
         window.addEventListener('resize', toggleSidebar);
 
         return () => {
             window.removeEventListener('resize', toggleSidebar);
         };
-    }, []);
+    }, [toggleSidebar]);
     return (
         <>
             <header>
