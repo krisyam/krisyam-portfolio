@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../css/accordion.css'
 
 export function AccordionComponent({ title, desc }) {
     const [toggle, setToggle] = useState(false)
@@ -11,9 +12,11 @@ export function AccordionComponent({ title, desc }) {
         <div
             className="accordion"
             style={{ cursor: 'pointer', userSelect: 'none' }}
-            onClick={handleClick}
         >
-            <div className={`questionContainer ${toggle ? 'active' : ''}`}>
+            <div 
+                className={`questionContainer ${toggle ? 'active' : ''}`}
+                onClick={handleClick}
+            >
                 <div className={`arrow ${toggle ? 'active' : ''}`}>{'>'}</div>
                 <div>{title}</div>
             </div>
@@ -21,7 +24,9 @@ export function AccordionComponent({ title, desc }) {
                 className="answerContainer"
                 style={{ display: toggle ? 'block' : 'none' }}
             >
-                {desc}
+                {desc.map((d, i) => (
+                    <p key={i}>{d}</p>
+                ))}
             </div>
         </div>
     )
